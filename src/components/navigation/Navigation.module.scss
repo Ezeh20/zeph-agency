@@ -1,0 +1,112 @@
+.header {
+    height: 80px;
+    border-bottom: 1px solid #C4C4C4;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+
+        .logoContainer {
+            .logo {
+                width: 150px;
+                height: 50px;
+
+                @media screen and (min-width:768px) {
+                    width: initial;
+                    height: initial;
+                }
+            }
+        }
+
+        .other {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .navLinks {
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                border-radius: 5px;
+                right: -100%;
+                top: 5.5rem;
+                z-index: 5;
+                padding: 1.5rem 1rem;
+                background-color: #006CEA;
+                transition: all 300ms ease-in-out;
+
+                .link {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .navLink {
+                        color: #fff;
+                    }
+                }
+
+
+
+                @media screen and (min-width:769px) {
+                    position: initial;
+                    background-color: transparent;
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    .link {
+                        display: flex;
+                        justify-content: flex-start;
+
+                        .navLink {
+                            color: #000;
+                        }
+
+                        .navLinkActive {
+                            color: #006CEA;
+                        }
+                    }
+
+                    .contact {
+                        width: 125px;
+                        background: var(--button-color, linear-gradient(180deg, #006CEA 0%, rgba(0, 9, 234, 0.48) 97.09%));
+                        color: #fff;
+                        border: none;
+                    }
+                }
+            }
+
+            .navLinksActive {
+                transition: all 300ms ease-in-out;
+                right: 24px;
+            }
+
+            .toggle {
+                .menuIcon {
+                    width: 32px;
+                    height: 32px;
+                    color: #000000;
+                }
+
+                .menuIconAlt {
+                    @extend .menuIcon;
+                    width: 32px;
+                    height: 32px;
+                }
+
+                @media screen and (min-width:769px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        height: 100px;
+
+        .nav {
+            height: 100px;
+        }
+    }
+}

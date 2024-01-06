@@ -1,4 +1,9 @@
-import styles from "./Home.module.scss";
+import Layout from "../../components/layout";
+
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <Layout>
+      <p>ade</p>
+    </Layout>
+  );
 };
